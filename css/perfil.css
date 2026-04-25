@@ -1,0 +1,165 @@
+/* DISEÑO EN GRILLA */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* FOTO DE PERFIL */
+.card-profile-main {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    overflow: hidden;
+    background: var(--bg-dark);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlight-text {
+    color: var(--accent);
+}
+
+/* INFORMACIÓN ACADÉMICA */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-item label {
+    color: var(--text-muted);
+    font-weight: bold;
+}
+
+/* EVOLUCIÓN (STEPPER) */
+.small-info {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.evolution-stepper {
+    margin-bottom: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.step.active {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.step span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.step.active span {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* ESTADO DE DOCUMENTOS */
+.docs-status {
+    background: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.doc-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.status-badge {
+    color: #2ecc71; /* Verde éxito */
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Sección de Rendimiento */
+.card-performance {
+    margin-top: 20px;
+}
+
+.table-mini {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.table-mini th {
+    background: rgba(52, 152, 219, 0.05);
+    color: var(--accent);
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid var(--border);
+}
+
+.table-mini td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+/* Indicadores de estado dentro de la tabla */
+.status-ok {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.status-current {
+    color: #f1c40f;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+/* Efecto Hover para las filas */
+.table-mini tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}

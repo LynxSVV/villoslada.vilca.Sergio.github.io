@@ -1,0 +1,130 @@
+/* Cabecera de tareas */
+.tareas-header {
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent);
+    padding-left: 20px;
+}
+
+/* Grilla de 16 semanas */
+.semanas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de cada semana */
+.semana-card {
+    background: var(--card-dark);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.semana-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+/* Resaltar semana actual */
+.semana-card.current {
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+}
+
+.semana-number {
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 5px;
+}
+
+/* Lista de tareas dentro de la card */
+.lista-tareas {
+    list-style: none;
+}
+
+.lista-tareas li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    color: var(--text-main);
+}
+
+.lista-tareas li::before {
+    content: "•";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Estados de tarea */
+.completada {
+    text-decoration: line-through;
+    color: var(--text-muted) !important;
+}
+
+.no-tareas {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+/* Semanas vacías (1 y 2) */
+.empty-week {
+    opacity: 0.7;
+    border-style: dashed !important;
+}
+
+/* Semana actual con brillo */
+.semana-card.current {
+    border: 2px solid var(--accent) !important;
+    background: rgba(52, 152, 219, 0.05);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.2);
+}
+
+/* Estilo para las tareas importantes */
+.task-important {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px !important;
+    padding-left: 15px;
+    border-left: 3px solid var(--accent);
+}
+
+.task-important strong {
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.task-important span {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* Etiqueta del docente */
+.tag-docente {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 10px;
+    background: #e67e22; /* Naranja para llamar la atención */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Semanas futuras */
+.status-waiting {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.future {
+    background: rgba(255,255,255,0.02);
+}

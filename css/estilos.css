@@ -246,32 +246,3 @@ tr:nth-child(even) {
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
 }
 
-/* Contenedor del submenú del sílabo */
-.submenu-silabo {
-    background: rgba(255, 255, 255, 0.03); /* Un fondo muy sutil */
-    border-left: 2px solid var(--accent); /* Una línea guía */
-    margin-left: 15px;
-    margin-bottom: 10px;
-    padding-left: 5px;
-}
-
-/* Estilo para los links internos del sílabo */
-.sub-link {
-    font-size: 13px !important;
-    padding: 8px 15px !important;
-    color: var(--text-muted) !important;
-}
-
-.sub-link:hover {
-    color: white !important;
-    background: transparent !important;
-    padding-left: 20px !important; /* Efecto de desplazamiento */
-}
-
-/* Ajuste para los botones de Unidad dentro del menú */
-.submenu-silabo .menu-btn {
-    font-size: 13px;
-    padding: 8px 15px;
-    background: transparent;
-    color: var(--text-muted);
-}
